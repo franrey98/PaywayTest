@@ -20,6 +20,7 @@ function sdkResponseHandler(status, response) {
         alert("Error al generar el token. Verifique los datos.");
     } else {
         console.log("Token generado exitosamente:", response);
+        window.ReactNativeWebView.postMessage(response);
         alert("Token generado: " + response);
     }
 }
